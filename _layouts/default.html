@@ -18,6 +18,25 @@
       {%- include google-analytics.html -%}
     {%- endif -%}
 
+    <style>
+      :root {
+        --root-font-size: 22px;
+      }
+    </style>
+    
+    <script>
+      // Initialize font size immediately to prevent layout shift
+      (function() {
+        const rootFontSizeKey = 'root-font-size';
+        const defaultFontSize = 22;
+        const savedFontSize = localStorage.getItem(rootFontSizeKey);
+        
+        if (savedFontSize) {
+          document.documentElement.style.setProperty('--root-font-size', savedFontSize + 'px');
+        }
+      })();
+    </script>
+
   </head>
   <body>
 
@@ -66,7 +85,7 @@
           localStorage.setItem(rootFontSizeKey, size.toString());
         }
 
-        // Initialize font size
+        // Initialize font size and display
         applyFontSize(currentFontSize);
 
         // Event listeners for font size buttons
