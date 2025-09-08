@@ -6,14 +6,12 @@ layout: default
 
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting" id="main" role="article" aria-label="Content">
 
-  <!-- The logo is now a direct grid item -->
   <div class="post-logo-left">
     <a href="{{ '/' | relative_url }}">
       <img src="{{ '/assets/images/carruc-eu-logo-inline.png' | relative_url }}" alt="carruc.eu logo inline">
     </a>
   </div>
 
-  <!-- The table of contents is also a direct grid item -->
   <aside class="post-toc-left">
     <nav class="toc" aria-label="Table of contents">
       <div class="toc-title">Table of Contents:</div>
@@ -35,7 +33,6 @@ layout: default
     </h1>
   {% endif %}
 
-  <!-- Create a single container for the intro and the body -->
   <div class="article-body-container">
     {% if page.intro %}
       <p class="intro">{{ page.intro }}</p>
@@ -57,7 +54,6 @@ layout: default
         </ul>
       </section>
     {% endif %}
-    <!-- END BIBLIOGRAPHY COMPONENT -->
   </div>
 
   <div class="post-meta">
@@ -75,11 +71,9 @@ layout: default
 
 <script>
   (function() {
-    // This selector is now corrected to find the content inside the new container.
     var content = document.querySelector('.post .article-body-container .post-content');
     var list = document.querySelector('.post .post-toc-left .toc-list');
     
-    // The rest of the script is the same, but it will now work.
     if (!content || !list) return;
   
     var headings = content.querySelectorAll('h1, h2, h3');
@@ -108,7 +102,7 @@ layout: default
   })();
 </script>
   
-<!-- Final, Corrected Sidenote Script -->
+<!-- Sidenote Script -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const contentContainer = document.querySelector('.article-body-container');
@@ -117,7 +111,6 @@ layout: default
     const footnoteContainer = document.querySelector('.footnotes');
     if (!footnoteContainer) return;
   
-    // Find all footnote references in the text
     const footnoteReferences = Array.from(contentContainer.querySelectorAll('a[href^="#fn:"]'));
   
     footnoteReferences.forEach(refLink => {
@@ -125,7 +118,6 @@ layout: default
       const footnoteContentElement = document.getElementById(footnoteId);
   
       if (footnoteContentElement) {
-        // --- NEW LOGIC STARTS HERE ---
 
         // 1. Get the footnote number from the link's text content.
         const footnoteNumber = refLink.textContent;
@@ -148,14 +140,11 @@ layout: default
           footnoteContentElement.innerHTML = numberText + footnoteContentElement.innerHTML;
         }
 
-        // --- NEW LOGIC ENDS HERE ---
-
-        // Create the sidenote element
+        // Create the sidenote, use numbered content
         const sidenote = document.createElement('aside');
         sidenote.className = 'sidenote';
         sidenote.setAttribute('data-sidenote-for', footnoteId);
         
-        // Use the modified content that now includes the number
         sidenote.innerHTML = footnoteContentElement.innerHTML;
         
         // Get the position of the footnote reference

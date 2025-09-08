@@ -1,4 +1,3 @@
-/* Main 3-column grid layout for the article */
 .post {
   padding-top: 0.5em;
   display: grid;
@@ -11,16 +10,11 @@
   column-gap: 4rem;
 }
 
-/* === CENTER COLUMN (Main Content) === */
+/* === CENTER COLUMN === */
 
-/* Grid placement for elements in the middle column */
 .post > .menu { grid-column: 2 / 3; grid-row: 1; }
 .post > .post-title { grid-column: 2 / 3; grid-row: 2; }
-
-/* Place the new container on row 3 */
 .post > .article-body-container { grid-column: 2 / 3; grid-row: 3; }
-
-/* The .post-meta follows the container on row 4 */
 .post > .post-meta { grid-column: 2 / 3; grid-row: 4; }
 
 /* Top navigation menu */
@@ -49,7 +43,7 @@
   white-space: nowrap;
 }
 
-/* Post title */
+
 .post > h1.post-title {
   font-family: "PP Editorial Old";
   font-size: calc(2.5 * #{$root-font-size});
@@ -58,7 +52,7 @@
   text-align: left;
 }
 
-/* Intro paragraph styling (selector updated) */
+/* Intro paragraph */
 .post .intro {
   color: $subtle-text-color;
   font-family: $font-family-italic;
@@ -68,7 +62,7 @@
   padding: 0;
 }
 
-/* === LEFT COLUMN (Logo and TOC) === */
+/* === LEFT COLUMN === */
 
 .post > .post-logo-left {
   grid-column: 1 / 2;
@@ -85,7 +79,7 @@
   object-fit: contain;
 }
 
-/* TOC aligns with the start of the article body container */
+
 .post > .post-toc-left {
   grid-column: 1 / 2;
   grid-row: 3;
@@ -93,7 +87,7 @@
   align-self: start;
 }
 
-/* General TOC styling */
+
 .post .toc {
   color: $subtle-text-color;
   margin-top: 0;
@@ -199,7 +193,7 @@
 .post .bibliography {
   margin-top: 3em;
   padding-top: 1em;
-  border-top: 1px solid #e0e0e0; /* A subtle separator line */
+  border-top: 1px solid #e0e0e0;
   color: $subtle-text-color;
 }
 
@@ -214,8 +208,8 @@
 }
 
 .post .bibliography-list {
-  list-style-type: none; /* Removes the bullet points */
-  margin: 0;            /* Removes the default list indentation */
+  list-style-type: none; 
+  margin: 0;
   padding: 0;
   text-align: left;
 }
@@ -227,25 +221,23 @@
 }
 
 .post .bibliography-list a {
-  color: inherit; /* Inherits the subtle text color */
+  color: inherit; 
   text-decoration: none;
-  border-bottom: 1px solid transparent; /* Prepare for hover effect */
+  border-bottom: 1px solid transparent;
   font-size: 0.83rem;
 }
 
 .post .bibliography-list a:hover {
-  background: none; /* Override general link hover */
-  border-bottom-color: $subtle-text-color; /* Underline on hover */
+  background: none;
+  border-bottom-color: $subtle-text-color;
 }
 
 /* === SIDENOTE STYLING === */
 
-/* The main content container needs to be a positioning context */
 .article-body-container {
   position: relative;
 }
 
-/* The sidenote itself */
 .sidenote {
   width: calc(11 * #{$root-font-size}); /* Match the width of your right column */
   font-size: 0.83rem;
@@ -260,7 +252,6 @@
   padding-left: 2em; 
 }
 
-/* Style the footnote number in the main text to be less intrusive */
 .post sup {
   vertical-align: baseline;
   position: relative;
@@ -275,22 +266,21 @@
 }
 .post a[href^="#fn-"]:hover {
   background: none;
-  color: #000; /* Or your main text color */
+  color: $text-color; 
 }
 
 /* === BLOCKQUOTE STYLING === */
 
 .post blockquote {
   font-style: italic;
-  font-family: $font-family-italic; /* Uses the italic font you have defined elsewhere */
-  color: $muted-text-color;       /* Matches the color of your intro text and TOC */
+  font-family: $font-family-italic; 
+  color: $muted-text-color;       
   
-  margin: 0.5em 0;              /* Adds vertical and horizontal spacing */
-  //padding-left: 1.5em;            /* Creates space between the border and the text */
-  //border-left: 3px solid #e0e0e0; /* A subtle decorative left border */
+  margin: 0.5em 0;              
+  //padding-left: 1.5em;            
+  //border-left: 3px solid #e0e0e0; 
 }
 
-/* Ensures paragraphs inside blockquotes don't have the standard text-indent */
 .post blockquote p {
   text-indent: 0;
 }
