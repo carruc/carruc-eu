@@ -5,13 +5,13 @@
 code.highlighter-rouge {
   background: $highlight;
   font-family: courier, monospace;
-  font-size: calc(0.875 * $body-font-size);
+  font-size: calc(0.875 * $root-font-size);
 }
 
 .highlight {
   background: #fff;
   font-family: courier, monospace;
-  font-size: calc(0.875 * $body-font-size);
+  font-size: calc(0.875 * $root-font-size);
   margin: 2rem auto;
 
   > * {

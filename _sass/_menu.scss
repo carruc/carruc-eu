@@ -18,7 +18,7 @@
 
 .site-navigation li {
   list-style: none;
-  font-size: calc(0.875 * $body-font-size);
+  font-size: calc(0.875 * $root-font-size);
   font-variant: small-caps;
   margin: 0;
   &.active a {
