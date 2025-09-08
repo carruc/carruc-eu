@@ -42,3 +42,6 @@ plugins:
 
 paginate: 12
 paginate_path: "/page/:num/"
+
+sass:
+  style: :expanded
