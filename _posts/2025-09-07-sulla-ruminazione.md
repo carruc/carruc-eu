@@ -36,9 +36,9 @@ bibliography:
 > **Definizione:** 
 > La **ruminazione** è una forma di pensiero persistente, circolare e depressivo, che rivolge la propria attenzione al fatto di avere un umore negativo, ai sintomi di tale condizione, alle cause, ai significati e alle conseguenze.
 
-Quando ti ossessioni con qualcosa[^1]. Quando non riesci a pensare altrimenti. Quando cammini, significante dopo significante, lungo un percorso di pensieri negativo, funesto, depressivo, distruttivo, oscuro – e circolare.
+Quando ti ossessioni con qualcosa. Quando non riesci a pensare altrimenti. Quando cammini, significante dopo significante, lungo un percorso di pensieri negativo, funesto, depressivo, distruttivo, oscuro – e circolare.
 
-Solo che non circoli su un piano, ma scendi sempre più in basso – abbassamento dell'umore, poi depressione, possibilmente PTSD. Il cervello é in uno stato di panico. Non é sotto controllo. In quei casi, la psicoterapia comportamentale é poco efficace.[^2]
+Solo che non circoli su un piano, ma scendi sempre più in basso – abbassamento dell'umore, poi depressione, possibilmente PTSD. Il cervello é in uno stato di panico. Non é sotto controllo. In quei casi, la psicoterapia comportamentale é poco efficace.
 
 Non solo – l'attività di ruminazione in un paziente é un forte predittore di episodi e sintomi depressivi, abuso di sostanze, abuso di alcool, disturbi alimentari, sintomi da PTSD nei 5 anni a venire. E questo interferisce con la psicoterapia ulteriormente.
 
@@ -226,5 +226,3 @@ Il punto d'entrata perfetto al miglioramento è proprio migliorare il contesto. 
   
   Non aspettare di "_sentirti meglio_" per agire. L'azione viene prima del miglioramento dell'umore.
 
-[^1]: This is the content for the first sidenote. It can be a short sentence.
-[^2]: Or it can be a longer one with multiple sentences. The layout should ideally handle this gracefully.
