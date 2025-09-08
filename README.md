@@ -9,3 +9,5 @@ To do:
 - [ ] dark theme
 - [ ] test components in responsive setting
 - [ ] make mobile views for posts and home
+- [ ] clean codebase
+- [ ] md to post pipeline
