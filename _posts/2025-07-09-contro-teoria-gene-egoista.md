@@ -23,7 +23,7 @@ Non solo - questa teoria mette il *potere evoluzionario solamente in mano al DNA
 
 # Nobles all'attacco
 
-![Denis Noble, IAI debate, 2021. (via ageist.com)|400x300](https://substackcdn.com/image/fetch/$s_!KdxC!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F63af9c05-a3cf-4228-9cef-908c2611dd72_2048x1536.jpeg)
+![Denis Noble, IAI debate, 2021. (via ageist.com)](https://substackcdn.com/image/fetch/$s_!KdxC!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F63af9c05-a3cf-4228-9cef-908c2611dd72_2048x1536.jpeg)
 
 I fratelli Raymond Noble (*UCL*) e Denis Noble (*Oxford*) dicono di no. Ma chi sono questi? Ho avuto il piacere di ascoltare una lezione del Professor Denis qualche tempo fa, e il suo carisma da vecchio-nonnetto-scienziato-un-po’-pazzo mi ha catturato.
 
@@ -34,9 +34,12 @@ La facilità con cui attraversa e disseziona gli strati di complessità con cui 
 Entrambi biologi e fisiologi, sono responsabili per molteplici scoperte nel mondo inter ed intra cellulare - tra cui il sistema con cui batte il cuore - e nel saggio “*Understanding Living Systems*" prendono la narrativa del *Gene Egoista* e la rivoltano come un calzino. 
 
 Sono complottisti? No, anzi. Hanno studiato i dogmi alla base del Gene Egoista in modo estremamente approfondito; ne fanno una genealogia; e poi confrontano le ipotesi con la realtà del consenso scientifico e di prove empiriche - dimostrando che il DNA *non é piano perfetto ed immutabile del corpo umano*, e che *i sistemi viventi non vivono per replicare il DNA*.
+
 ## Essere in Vita
 
 > ”The replication of DNA is not the purpose of life. Responding to change is.”
+>
+> *Denis Noble, Understanding Living Systems*
 
 Per quanto ambiziosa, questa citazione comunica molto bene il cambio di paradigma. Piuttosto che interpretare *life* come la nostra *lifetime*, o come decidiamo di agire nel tempo che caratterizza la nostra vita, intendiamolo come *essere in vita*. 
 
@@ -47,7 +50,8 @@ E qui introduciamo la prima rottura con la teoria del Gene Egoistico: *il DNA de
 Non esiste una forza superiore che organizza la vita - ma *la vita si auto-organizza*. Come potremmo evolvere, sennò?
 
 > “Non vi è errore più pericoloso di quello di confondere l’effetto con la causa: io chiamo ciò la vera perversione della ragione.” 
-> *-Nietzsche, Crepuscolo degli Idoli*
+>
+> *Nietzsche, Crepuscolo degli Idoli*
 
 ## Allora cos'è il DNA?
 

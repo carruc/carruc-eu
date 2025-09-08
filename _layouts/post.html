@@ -19,6 +19,11 @@ layout: default
     </nav>
   </aside>
 
+  <!-- This is the container for sidenotes, placed in the third grid column -->
+  <div class="post-side-right" id="sidenotes-container">
+    <!-- Sidenotes will be dynamically injected here -->
+  </div>
+
   <nav class="menu">
     <ul>
       {% for item in site.data.menu %}
@@ -42,11 +47,9 @@ layout: default
       {{ content }}
     </div>
 
-    <!-- ADD THE BIBLIOGRAPHY COMPONENT HERE -->
     {% if page.bibliography %}
       <section class="bibliography">
         <h3 class="bibliography-title">Bibliography</h3>
-        <!-- CHANGE this from <ol> to <ul> -->
         <ul class="bibliography-list">
           {% for item in page.bibliography %}
             <li><a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.name }}</a></li>
@@ -69,100 +72,123 @@ layout: default
 
 </article>
 
+<!-- Combined Scripts for TOC, Sidenotes, and Image Captions -->
 <script>
-  (function() {
-    var content = document.querySelector('.post .article-body-container .post-content');
-    var list = document.querySelector('.post .post-toc-left .toc-list');
-    
-    if (!content || !list) return;
-  
-    var headings = content.querySelectorAll('h1, h2, h3');
-    if (!headings.length) return;
-  
-    function slugify(text){
-      return text.toLowerCase().trim().replace(/[^a-z0-9\s-]/g,'').replace(/\s+/g,'-').replace(/-+/g,'-');
-    }
-  
-    headings.forEach(function(h){
-      var level = parseInt(h.tagName.substr(1), 10);
-      if (level < 1 || level > 3) return;
-  
-      if (!h.id) {
-        h.id = slugify(h.textContent || h.innerText || 'section');
-      }
-  
-      var li = document.createElement('li');
-      li.className = 'toc-level-' + level;
-      var a = document.createElement('a');
-      a.href = '#' + h.id;
-      a.textContent = h.textContent || h.innerText || '';
-      li.appendChild(a);
-      list.appendChild(li);
-    });
-  })();
-</script>
-  
-<!-- Sidenote Script -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const contentContainer = document.querySelector('.article-body-container');
-    if (!contentContainer) return;
-  
-    const footnoteContainer = document.querySelector('.footnotes');
-    if (!footnoteContainer) return;
-  
-    const footnoteReferences = Array.from(contentContainer.querySelectorAll('a[href^="#fn:"]'));
-  
-    footnoteReferences.forEach(refLink => {
-      const footnoteId = refLink.getAttribute('href').substring(1);
-      const footnoteContentElement = document.getElementById(footnoteId);
-  
-      if (footnoteContentElement) {
+  document.addEventListener("DOMContentLoaded", function() {
+    // 1. Table of Contents Generator
+    (function() {
+      var content = document.querySelector('.post .article-body-container .post-content');
+      var list = document.querySelector('.post .post-toc-left .toc-list');
+      if (!content || !list) return;
+      var headings = content.querySelectorAll('h1, h2, h3');
+      if (!headings.length) return;
 
-        // 1. Get the footnote number from the link's text content.
-        const footnoteNumber = refLink.textContent;
+      function slugify(text) {
+        return text.toLowerCase().trim().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-');
+      }
+
+      headings.forEach(function(h) {
+        var level = parseInt(h.tagName.substr(1), 10);
+        if (level < 1 || level > 3) return;
+        if (!h.id) {
+          h.id = slugify(h.textContent || h.innerText || 'section');
+        }
+        var li = document.createElement('li');
+        li.className = 'toc-level-' + level;
+        var a = document.createElement('a');
+        a.href = '#' + h.id;
+        a.textContent = h.textContent || h.innerText || '';
+        li.appendChild(a);
+        list.appendChild(li);
+      });
+    })();
+
+    // 2. Image Caption Generator
+    (function() {
+        const images = document.querySelectorAll('.post-content img');
+        images.forEach(img => {
+            const altText = img.alt;
+            if (!altText.trim()) return;
+
+            const figure = document.createElement('figure');
+            const figcaption = document.createElement('figcaption');
+            figcaption.textContent = altText;
+            
+            img.parentNode.insertBefore(figure, img);
+            figure.appendChild(img);
+            figure.appendChild(figcaption);
+        });
+    })();
+
+    // 3. Sidenote Repositioning Logic
+    (function() {
+      const sidenotesContainer = document.getElementById('sidenotes-container');
+      const articleBody = document.querySelector('.article-body-container');
+      if (!sidenotesContainer || !articleBody) return;
+
+      // Move footnote content into sidenote elements
+      document.querySelectorAll('.footnotes li').forEach(footnote => {
+        const noteId = footnote.id; // e.g., "fn:1"
+        const backRefLink = footnote.querySelector('a[href^="#fnref"]');
+        if (!noteId || !backRefLink) return;
+
+        // *** INTEGRATED LOGIC: Get number from the original reference link in the text ***
+        const refLinkInText = document.querySelector(`a[href="#${noteId}"]`);
+        const footnoteNumber = refLinkInText ? refLinkInText.textContent : '';
         const numberText = `${footnoteNumber}. `;
 
-        // 2. Remove the back-arrow link from the footnote definition.
-        const backlink = footnoteContentElement.querySelector('a[href^="#fnref:"]');
-        if (backlink) {
-          backlink.remove();
-        }
+        // Remove the back-arrow link
+        backRefLink.remove();
 
-        // 3. Prepend the number to the content.
-        // This checks if the footnote content is wrapped in a <p> tag.
-        const firstParagraph = footnoteContentElement.querySelector('p');
+        // *** INTEGRATED LOGIC: Prepend the number, handling <p> tags correctly ***
+        const firstParagraph = footnote.querySelector('p');
         if (firstParagraph) {
-          // If it is, insert the number inside the paragraph to avoid a line break.
           firstParagraph.innerHTML = numberText + firstParagraph.innerHTML;
         } else {
-          // Otherwise, just prepend it to the whole content.
-          footnoteContentElement.innerHTML = numberText + footnoteContentElement.innerHTML;
+          footnote.innerHTML = numberText + footnote.innerHTML;
         }
 
-        // Create the sidenote, use numbered content
-        const sidenote = document.createElement('aside');
-        sidenote.className = 'sidenote';
-        sidenote.setAttribute('data-sidenote-for', footnoteId);
+        const backRefId = backRefLink.getAttribute('href').substring(1);
+        const newSidenote = document.createElement('aside');
+        newSidenote.id = `sidenote-${noteId}`;
+        newSidenote.className = 'sidenote';
+        newSidenote.dataset.ref = backRefId;
+        newSidenote.innerHTML = footnote.innerHTML; // Use the modified, numbered HTML
         
-        sidenote.innerHTML = footnoteContentElement.innerHTML;
-        
-        // Get the position of the footnote reference
-        const refPosition = refLink.getBoundingClientRect();
-        const containerPosition = contentContainer.getBoundingClientRect();
-  
-        // Position the sidenote vertically aligned with the reference
-        sidenote.style.position = 'absolute';
-        sidenote.style.top = `${refPosition.top - containerPosition.top}px`;
-        sidenote.style.left = '105%';
-  
-        contentContainer.appendChild(sidenote);
+        sidenotesContainer.appendChild(newSidenote);
+      });
+
+      // Hide the original footnote list
+      const originalFootnotes = document.querySelector('.footnotes');
+      if (originalFootnotes) {
+        originalFootnotes.style.display = 'none';
       }
-    });
-  
-    // Hide the original footnote section at the bottom
-    footnoteContainer.style.display = 'none';
+
+      // Position sidenotes and prevent overlap
+      function positionSidenotes() {
+        let lastSidenoteBottom = 0;
+        const sidenoteMargin = 20; // Vertical margin between stacked sidenotes (in pixels)
+
+        document.querySelectorAll('sup[id^="fnref"]').forEach(ref => {
+          const refId = ref.id;
+          const sidenote = document.querySelector(`.sidenote[data-ref="${refId}"]`);
+
+          if (sidenote) {
+            const refTop = ref.offsetTop;
+            let newTop = refTop;
+
+            if (newTop < lastSidenoteBottom) {
+              newTop = lastSidenoteBottom;
+            }
+
+            sidenote.style.top = `${newTop}px`;
+            lastSidenoteBottom = newTop + sidenote.offsetHeight + sidenoteMargin;
+          }
+        });
+      }
+
+      positionSidenotes();
+      window.addEventListener('resize', positionSidenotes);
+    })();
   });
 </script>
-
-  

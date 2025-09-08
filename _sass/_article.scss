@@ -1,7 +1,7 @@
 .post {
   padding-top: 0.5em;
   display: grid;
-  grid-template-columns: calc(11 * #{$root-font-size}) minmax(auto, calc(30 * #{$root-font-size})) calc(11 * #{$root-font-size});
+  grid-template-columns: calc(13 * #{$root-font-size}) minmax(auto, calc(28 * #{$root-font-size})) calc(13 * #{$root-font-size});
   align-items: start;
   justify-content: center;
   width: 100%;
@@ -10,12 +10,15 @@
   column-gap: 4rem;
 }
 
+
 /* === CENTER COLUMN === */
+
 
 .post > .menu { grid-column: 2 / 3; grid-row: 1; }
 .post > .post-title { grid-column: 2 / 3; grid-row: 2; }
 .post > .article-body-container { grid-column: 2 / 3; grid-row: 3; }
 .post > .post-meta { grid-column: 2 / 3; grid-row: 4; }
+
 
 /* Top navigation menu */
 .post > .menu {
@@ -26,6 +29,7 @@
   width: 100%;
 }
 
+
 .post > .menu ul {
   list-style: none;
   margin: 0;
@@ -33,6 +37,7 @@
   display: flex;
   gap: 1em;
 }
+
 
 .post > .menu a {
   text-decoration: none;
@@ -44,6 +49,7 @@
 }
 
 
+
 .post > h1.post-title {
   font-family: "PP Editorial Old";
   font-size: calc(2.5 * #{$root-font-size});
@@ -51,6 +57,7 @@
   padding: calc(2.5 * #{$root-font-size}) 0 0 0;
   text-align: left;
 }
+
 
 /* Intro paragraph */
 .post .intro {
@@ -62,7 +69,9 @@
   padding: 0;
 }
 
+
 /* === LEFT COLUMN === */
+
 
 .post > .post-logo-left {
   grid-column: 1 / 2;
@@ -70,6 +79,7 @@
   justify-self: end;
   margin-top: calc(0.6 * #{$root-font-size});
 }
+
 
 .post > .post-logo-left img {
   height: calc(1.11 * #{$root-font-size});
@@ -80,6 +90,7 @@
 }
 
 
+
 .post > .post-toc-left {
   grid-column: 1 / 2;
   grid-row: 3;
@@ -88,11 +99,13 @@
 }
 
 
+
 .post .toc {
   color: $subtle-text-color;
   margin-top: 0;
   text-align: right;
 }
+
 
 .post .toc-title {
   font-family: $font-family-bold;
@@ -100,11 +113,13 @@
   margin: 0 0 .5em;
 }
 
+
 .post .toc-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
 
 .post .toc-list a {
   color: inherit;
@@ -112,20 +127,31 @@
   font-family: $font-family;
 }
 
+
 .post .toc-list li { margin: .25em 0; }
 .post .toc-list li.toc-level-1 a { font-size: 1.11rem; }
 .post .toc-list li.toc-level-2 a { font-size: 1rem; }
 .post .toc-list li.toc-level-3 a { font-size: 0.83rem; }
 
+
 /* === RIGHT COLUMN === */
+
 
 .post .post-side-right {
   grid-column: 3 / 4;
-  grid-row: 2 / -1;
-  justify-self: start;
+  grid-row: 3 / -1; /* Align with article body */
+  position: relative; /* Positioning context for absolute sidenotes */
+  width: 100%;
 }
 
+
 /* === GENERAL ARTICLE BODY STYLES === */
+
+
+.article-body-container {
+  position: relative;
+}
+
 
 .post .post-content h1,
 .post .post-content h2,
@@ -136,9 +162,11 @@
   font-family: "PP Editorial Old";
 }
 
+
 .post .post-content h1 { font-size: calc(1.67 * #{$root-font-size}); }
 .post .post-content h2 { font-size: calc(1.33 * #{$root-font-size}); }
 .post .post-content h3 { font-size: calc(1.11 * #{$root-font-size}); }
+
 
 .post p {
   text-align: left;
@@ -146,39 +174,47 @@
   padding-bottom: 1.25rem;
 }
 
+
 .post p:first-of-type,
 .post h2 + p {
   text-indent: 0;
 }
 
+
 .post a:hover {
   background: $highlight;
 }
+
 
 .post em, .post i {
   font-family: $font-family;
   font-style: italic;
 }
 
+
 .post strong, .post b {
   font-family: $font-family;
   font-weight: 700;
 }
 
+
 .post dl, .post ul, .post ol {
   margin: 1.5em;
 }
+
 
 .post li {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
 
+
 .post-meta {
   margin-bottom: 2em;
   margin-top: 2em;
   text-align: right;
 }
+
 
 .back-link {
   display: inline-block;
@@ -188,7 +224,9 @@
   text-transform: uppercase;
 }
 
+
 /* === BIBLIOGRAPHY COMPONENT === */
+
 
 .post .bibliography {
   margin-top: 3em;
@@ -196,6 +234,7 @@
   border-top: 1px solid #e0e0e0;
   color: $subtle-text-color;
 }
+
 
 .post .bibliography-title {
   font-family: $font-family-bold;
@@ -207,6 +246,7 @@
   color: $subtle-text-color;
 }
 
+
 .post .bibliography-list {
   list-style-type: none; 
   margin: 0;
@@ -215,10 +255,12 @@
 }
 
 
+
 .post .bibliography-list li {
   margin-bottom: 0.25rem;
   padding-left: 0rem;
 }
+
 
 .post .bibliography-list a {
   color: inherit; 
@@ -227,29 +269,40 @@
   font-size: 0.83rem;
 }
 
+
 .post .bibliography-list a:hover {
   background: none;
   border-bottom-color: $subtle-text-color;
 }
 
-/* === SIDENOTE STYLING === */
 
-.article-body-container {
-  position: relative;
-}
+/* === SIDENOTE STYLING (NEW) === */
 
 .sidenote {
-  width: calc(11 * #{$root-font-size}); /* Match the width of your right column */
+  position: absolute;
+  left: 0;
+  width: 100%;
   font-size: 0.83rem;
   line-height: 1.4;
   color: $subtle-text-color;
-  
-  /* These are set by JS, but defaults are good */
-  position: absolute;
-  
-  /* Prevents sidenotes from overlapping the main text */
-  box-sizing: border-box;
-  padding-left: 2em; 
+  transform: translateY(9rem);
+}
+  /* Remove default list styling if a <p> isn't used 
+  > :first-child {
+    margin-top: 0;
+  }
+}
+
+.sidenote p {
+  text-align: justify;
+  text-justify: inter-word;
+  padding-bottom: 0;
+  margin-bottom: 1em;
+}*/
+
+/* Hide original Kramdown/Jekyll footnotes list */
+.footnotes {
+  display: none;
 }
 
 .post sup {
@@ -260,6 +313,7 @@
   color: $subtle-text-color;
 }
 
+
 .post a[href^="#fn-"] {
   text-decoration: none;
   border-bottom: none;
@@ -269,19 +323,57 @@
   color: $text-color; 
 }
 
+
 /* === BLOCKQUOTE STYLING === */
+
 
 .post blockquote {
   font-style: italic;
   font-family: $font-family-italic; 
   color: $muted-text-color;       
-  
-  margin: 0.5em 0;              
-  //padding-left: 1.5em;            
-  //border-left: 3px solid #e0e0e0; 
+  margin: 0.5em 0;    
 }
+
 
 .post blockquote p {
   text-indent: 0;
 }
 
+/* Add the horizontal line after the blockquote's content */
+.post blockquote::after {
+  content: "";
+  position: relative;
+  display: block;
+  width: 50%;
+  height: 1px;
+  background-color: currentColor; 
+  opacity: 0.4;
+  transform: translateY(-3rem) translateX(3.2rem);
+}
+
+
+
+/* === STYLING FOR IMAGES WITHIN ARTICLES (NEW) === */
+
+.post-content figure {
+  margin: 0 4rem; /* Added vertical margin for spacing */
+  padding: 0;
+  width: auto;
+  text-align: center;
+}
+
+.post-content figure img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post-content figure figcaption {
+  display: block;
+  margin: 0.83rem 0;
+  font-size: 0.83rem;
+  color: $subtle-text-color;
+  line-height: 1.4;
+}
