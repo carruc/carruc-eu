@@ -2,12 +2,12 @@
 .post {
   padding-top: 0.5em;
   display: grid;
-  grid-template-columns: calc(11 * $root-font-size) minmax(auto, calc(28 * $root-font-size)) calc(11 * $root-font-size);
+  grid-template-columns: calc(11 * #{$root-font-size}) minmax(auto, calc(28 * #{$root-font-size})) calc(11 * #{$root-font-size});
   align-items: start;
   justify-content: center;
   width: 100%;
   grid-auto-rows: auto;
-  row-gap: calc(0.75 * $root-font-size);
+  row-gap: calc(0.75 * #{$root-font-size});
   column-gap: 4rem;
 }
 
@@ -27,7 +27,7 @@
 .post > .menu {
   justify-self: start;
   align-self: start;
-  margin: calc(0.5 * $root-font-size) 0 0;
+  margin: calc(0.5 * #{$root-font-size}) 0 0;
   padding: 0;
   width: 100%;
 }
@@ -45,16 +45,16 @@
   color: inherit;
   font-family: $font-family;
   font-variant: small-caps;
-  font-size: calc(1.11 * $root-font-size);
+  font-size: calc(1.11 * #{$root-font-size});
   white-space: nowrap;
 }
 
 /* Post title */
 .post > h1.post-title {
   font-family: "PP Editorial Old";
-  font-size: calc(2.5 * $root-font-size);
+  font-size: calc(2.5 * #{$root-font-size});
   margin: 0;
-  padding: calc(2.5 * $root-font-size) 0 0 0;
+  padding: calc(2.5 * #{$root-font-size}) 0 0 0;
   text-align: left;
 }
 
@@ -62,7 +62,7 @@
 .post .intro {
   color: $subtle-text-color;
   font-family: $font-family-italic;
-  font-size: calc(0.83 * $root-font-size);
+  font-size: calc(0.83 * #{$root-font-size});
   text-indent: 0;
   margin: 0.5em 0 2.5em; /* Adds space between intro and content */
   padding: 0;
@@ -74,11 +74,11 @@
   grid-column: 1 / 2;
   grid-row: 1;
   justify-self: end;
-  margin-top: calc(0.6 * $root-font-size);
+  margin-top: calc(0.6 * #{$root-font-size});
 }
 
 .post > .post-logo-left img {
-  height: calc(1.11 * $root-font-size);
+  height: calc(1.11 * #{$root-font-size});
   width: auto;
   margin: 0;
   display: block;
@@ -142,9 +142,9 @@
   font-family: "PP Editorial Old";
 }
 
-.post .post-content h1 { font-size: calc(1.67 * $root-font-size); }
-.post .post-content h2 { font-size: calc(1.33 * $root-font-size); }
-.post .post-content h3 { font-size: calc(1.11 * $root-font-size); }
+.post .post-content h1 { font-size: calc(1.67 * #{$root-font-size}); }
+.post .post-content h2 { font-size: calc(1.33 * #{$root-font-size}); }
+.post .post-content h3 { font-size: calc(1.11 * #{$root-font-size}); }
 
 .post p {
   text-align: left;
@@ -188,7 +188,7 @@
 
 .back-link {
   display: inline-block;
-  font-size: calc(0.75 * $root-font-size);
+  font-size: calc(0.75 * #{$root-font-size});
   padding: 1em;
   text-decoration: none;
   text-transform: uppercase;
@@ -247,7 +247,7 @@
 
 /* The sidenote itself */
 .sidenote {
-  width: calc(11 * $root-font-size); /* Match the width of your right column */
+  width: calc(11 * #{$root-font-size}); /* Match the width of your right column */
   font-size: 0.83rem;
   line-height: 1.4;
   color: $subtle-text-color;

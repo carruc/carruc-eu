@@ -1,5 +1,5 @@
 html {
-  font-size: 22px;
+  font-size: #{$root-font-size};
 }
 
 body {
@@ -11,18 +11,18 @@ body {
 }
 
 h1 {
-  font-size: calc(3 * $root-font-size);
+  font-size: calc(3 * #{$root-font-size});
   margin: 1em auto;
 }
 
 h2 {
-  font-size: calc(2 * $root-font-size);
+  font-size: calc(2 * #{$root-font-size});
   margin: 1em auto;
   text-align: left;
 }
 
 h3 {
-  font-size: calc(1.33 * $root-font-size);
+  font-size: calc(1.33 * #{$root-font-size});
   margin: 1em auto;
   text-align: left;
 }
@@ -44,7 +44,7 @@ h5 {
 }
 
 h6 {
-  font-size: calc(0.875 * $root-font-size);
+  font-size: calc(0.875 * #{$root-font-size});
   font-style: italic;
   margin: 1em auto;
   text-align: center;
@@ -80,7 +80,7 @@ blockquote.epigraph {
 }
 
 small {
-  font-size: calc(0.75 * $root-font-size);
+  font-size: calc(0.75 * #{$root-font-size});
 }
 
 p > cite {
@@ -108,7 +108,7 @@ figure img {
 }
 
 figcaption {
-  font-size: calc(0.875 * $root-font-size);
+  font-size: calc(0.875 * #{$root-font-size});
   font-style: italic;
   text-align: center;
   margin-bottom: 2em;
@@ -127,7 +127,7 @@ figcaption {
 }
 
 .content-title {
-  font-size: calc(2 * $root-font-size);
+  font-size: calc(2 * #{$root-font-size});
   margin-bottom: 2em;
   text-align: center;
 }
@@ -135,7 +135,7 @@ figcaption {
 .post-date {
   color: $muted-text-color;
   display: block;
-  font-size: calc(0.825 * $root-font-size);
+  font-size: calc(0.825 * #{$root-font-size});
   white-space: nowrap;
   text-transform: uppercase;
   .post-link & {
@@ -153,7 +153,7 @@ figcaption {
   background: $brand-color;
   border: 1px dashed transparent;
   display: block;
-  font-size: calc(0.875 * $root-font-size);
+  font-size: calc(0.875 * #{$root-font-size});
   font-weight: 700;
   margin-top: -2.625rem;
   padding: .5rem;
