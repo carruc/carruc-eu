@@ -35,6 +35,8 @@ bibliography:
 
 > **Definizione:** 
 > La **ruminazione** è una forma di pensiero persistente, circolare e depressivo, che rivolge la propria attenzione al fatto di avere un umore negativo, ai sintomi di tale condizione, alle cause, ai significati e alle conseguenze.
+> 
+> Istituto di Psicoterapia, IPSICO
 
 Quando ti ossessioni con qualcosa. Quando non riesci a pensare altrimenti. Quando cammini, significante dopo significante, lungo un percorso di pensieri negativo, funesto, depressivo, distruttivo, oscuro – e circolare.
 
@@ -77,6 +79,8 @@ Faccio schifo, quindi andare in palestra non servirà a nulla – rimarrò comun
 Emozioni negative e pensiero pessimistico riducono il valore dell'azione allo zero. Di conseguenza, il circuito della motivazione non vede il senso di perseguire qualunque azione. (Se non forse per ottenere una hit dopaminica momentanea)
 
 > *Esempio:* I black-piller o red-piller del mondo internettiano sono il caso studio perfetto. Ragionano tramite generalizzazioni a ventaglio "*tutte le donne sono bugiarde*". Non vedono possibilità d'uscita dal loro stato, o se c'è non ha alcun valore. Sono nati *incel* e lo rimarranno per sempre. Il progresso é inutile.
+>
+> Estratto da una live di [Dr. K](https://www.healthygamer.gg/)
 
 # Evitamento
 
