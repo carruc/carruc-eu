@@ -1,0 +1,30 @@
+name: Build and Deploy Jekyll Site
+on:
+  push:
+    branches:
+      - main # Or 'master', depending on your repository's main branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby, Bundler, and Jekyll
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1' # Ensure this matches a version compatible with your Gemfile
+          bundler-cache: true # This will cache your gems for faster builds
+
+      - name: Build the Jekyll site
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production # Sets the environment to 'production'
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          cname: carruc.eu # Crucial for your custom domain
