@@ -1,7 +1,7 @@
 .post {
   padding-top: 0.5em;
   display: grid;
-  grid-template-columns: calc(11 * #{$root-font-size}) minmax(auto, calc(28 * #{$root-font-size})) calc(11 * #{$root-font-size});
+  grid-template-columns: calc(11 * #{$root-font-size}) minmax(auto, calc(30 * #{$root-font-size})) calc(11 * #{$root-font-size});
   align-items: start;
   justify-content: center;
   width: 100%;

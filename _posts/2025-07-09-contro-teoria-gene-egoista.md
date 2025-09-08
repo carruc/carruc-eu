@@ -1,13 +1,13 @@
 ---
-title: Contro la teoria del Gene Egoista
+title: Contro il Gene Egoista
 category: biology
 layout: post
 image: /assets/images/dna.png
 intro: Articolo nato dalla necessità di condividere alcune incomprensioni sul patrimonio genetico nell'immaginario comune. In più sono tre mesi che faccio binge-watching su Denis Noble, leggo libri sulla coscienza e sui sistemi viventi. Da qualche parte dovevano uscire.
 bibliography:
- - name: "R. Noble and D. Noble, Understanding Living Systems. Cambridge: Cambridge University Press, 2023."
+  - name: "R. Noble and D. Noble, Understanding Living Systems. Cambridge: Cambridge University Press, 2023."
     url: "https://doi.org/10.1017/9781009277396"
- - name: "R. Dawkins, The Selfish Gene. Oxford University Press, 1976."
+  - name: "R. Dawkins, The Selfish Gene. Oxford University Press, 1976."
     url: "https://global.oup.com/academic/product/the-selfish-gene-9780198788607"
 ---
 
