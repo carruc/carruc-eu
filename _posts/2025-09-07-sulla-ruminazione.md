@@ -40,11 +40,11 @@ bibliography:
 
 Quando ti ossessioni con qualcosa. Quando non riesci a pensare altrimenti. Quando cammini, significante dopo significante, lungo un percorso di pensieri negativo, funesto, depressivo, distruttivo, oscuro – e circolare.
 
-Solo che non circoli su un piano, ma scendi sempre più in basso – abbassamento dell'umore, poi depressione, possibilmente PTSD. Il cervello é in uno stato di panico. Non é sotto controllo. In quei casi, la psicoterapia comportamentale é poco efficace.
+Solo che non circoli su un piano. Scendi sempre più in basso sulla scala dell'umore. Il cervello é in uno stato di panico. Non é sotto controllo. In quei casi, la psicoterapia comportamentale é poco efficace.
 
 Non solo – l'attività di ruminazione in un paziente é un forte predittore di episodi e sintomi depressivi, abuso di sostanze, abuso di alcool, disturbi alimentari, sintomi da PTSD nei 5 anni a venire. E questo interferisce con la psicoterapia ulteriormente.
 
-Perchè la ruminazione, o *rimuginio*, aumenta la propensione a depressione, sintomi di ansia e trasformare traumi in semi di PTSD?
+Perchè la ruminazione, o *rimuginio*, aumenta la propensione a depressione, sintomi di ansia e trasforma traumi in semi di PTSD?
 
 # Esaltatore Emozionale
 

@@ -10,5 +10,5 @@ To do:
 - [ ] test components in responsive setting
 - [ ] make mobile views for posts and home
 - [ ] md to post pipeline
-- [ ] avoid sidenote collision
-- [ ] create image component for articles
+- [x] avoid sidenote collision
+- [x] create image component for articles
