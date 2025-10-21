@@ -1,6 +1,6 @@
 ---
-layout: post
-title: "About me"
+layout: aboutme
+title: "About Me"
 ---
 
-About me
+Welcome to my corner of the internet! I'm Pietro Carrucciu.

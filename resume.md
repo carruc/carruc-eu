@@ -1,6 +1,7 @@
 ---
-layout: post
+layout: pdf
 title: "Resume"
+pdf_url: /assets/pdfs/Carrucciu_Pietro_Resume.pdf
 ---
 
-Resume
+This is my professional resume showcasing my experience and skills in software development and technology.

@@ -1,0 +1,53 @@
+---
+layout: default
+---
+
+<div class="home-container">
+  <!-- Side Panel: Logo and Navigation -->
+  <aside class="side-panel">
+    <div class="logo">
+      <a href="{{ '/' | relative_url }}">
+        <img src="{{ '/assets/images/carruc-eu-logo.png' | relative_url }}" alt="carruc.eu logo">
+      </a>
+    </div>
+    <nav class="menu">
+      <ul>
+        {% for item in site.data.menu %}
+          <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+    <div class="search">
+      {% unless site.hide_search %}
+        {% include search.html %}
+      {% endunless %}
+    </div>
+  </aside>
+
+  
+  <main class="middle-panel">
+    <!-- Document Header -->
+    <header class="blog-header">
+      <h1 class="blog-title">{{ page.title }}</h1>
+      <div class="divider">
+        <img src="{{ '/assets/images/divider.svg' | relative_url }}" alt="divider">
+      </div>
+    </header>
+    <!-- About me content -->
+    <div class="about-me-content">
+      {{ content }}
+    </div>
+  </main>
+</div>
+
+<style>
+@media (max-width: 768px) {
+  .about-me-content {
+    padding: 0 10px;
+  }
+  
+  .about-me-content h2 {
+    font-size: calc(1.1 * 22px);
+  }
+}
+</style>
