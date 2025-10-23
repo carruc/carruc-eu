@@ -41,11 +41,8 @@ My simple guide is:
    Sources for OPEN fonts: [Google Fonts](https://fonts.google.com/), [Awwwards](https://www.awwwards.com/awwwards/collections/free-fonts/), [Best Free Fonts](https://bestfreefonts.com/), [Open Foundry](https://open-foundry.com/fonts), [Use\&Modify](https://usemodify.com/), [open source typefaces collection](https://www.are.na/frederic-brodbeck/open-source-typefaces)
 
 2. Choose ONE catchy colour, dark enough to provide **contrast** as a background. You can browse them on [Coloors](https://coolors.co/palettes/trending).  
-3. Make/Find two fancy *noise gradient backgrounds*. Make one white, one black and one coloured, with the same pattern.
 
-   Examples:  
-   ![](https://drive.google.com/file/d/1FX_bOWBB9rcMETKdKEoe36Q15a2h8RhX/view?usp=sharing)![](https://drive.google.com/file/d/1zlP5DkbaE7Mj0oXf1ctvaj5nSfBmROzv/view?usp=sharing)
-   Some sources: [Unsplash](https://unsplash.com/s/photos/grainy-gradient), [Freepik](https://www.freepik.com/free-photos-vectors/grainy-gradient). To edit them and tinker, I suggest using [photopea.com](http://photopea.com)
+3. Make/Find two fancy *noise gradient backgrounds*. Make one white, one black and one coloured, with the same pattern. Some sources: [Unsplash](https://unsplash.com/s/photos/grainy-gradient), [Freepik](https://www.freepik.com/free-photos-vectors/grainy-gradient). To edit them and tinker, I suggest using [photopea.com](http://photopea.com)
 
 4. Voilà: you’re ready to make a clean pitch deck to raise 80 thousand bajillions of dollars.
 
@@ -55,14 +52,6 @@ Google Docs is absolutely okay for these. I created a Markdown Formatted preset 
 
 ## Anything Else
 
-I have often used [Whimsical](http://whimsical.com) to make cute infographics. Results are neat but exporting images leads to having a watermark in the bottom right corner.
-
-![][image3]
-
-Another nice piece of software is [Miro](https://miro.com/).
-
-![][image4]
+I have often used [Whimsical](http://whimsical.com) to make cute infographics. Results are neat but exporting images leads to having a watermark in the bottom right corner. Another nice piece of software is [Miro](https://miro.com/).
 
 For software diagrams: [Diagrams.net.](http://Diagrams.net) No stylish aesthetics but you get what you pay for.
-
-![][image5]
