@@ -2,7 +2,7 @@
 title: Be CREACTIVE
 category: creativity
 layout: post
-image: /assets/images/gift.png
+image: /assets/images/creactive.png
 intro: Page that gets you up to speed in making sufficiently nice docs.
 ---
 
